@@ -1,4 +1,4 @@
-package game;
+package project;
 
 public class Controller {
 }
