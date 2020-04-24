@@ -30,11 +30,11 @@
             <VBox prefHeight="600.0" prefWidth="800.0">
                <children>
                   <Region prefHeight="175.0" prefWidth="200.0" />
-                  <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="200.0" style="-fx-font-size: 20;" text="New Game" />
+                  <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="200.0" style="-fx-font-size: 20;" text="New Game" onAction="#newGameAction"/>
                   <Region prefHeight="50.0" prefWidth="200.0" />
-                  <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="200.0" style="-fx-font-size: 20;" text="Load Game" />
+                  <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="200.0" style="-fx-font-size: 20;" text="Load Game" onAction="#loadGameAction"/>
                   <Region prefHeight="50.0" prefWidth="200.0" />
-                  <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="200.0" style="-fx-font-size: 20;" text="Quit" />
+                  <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="200.0" style="-fx-font-size: 20;" text="Quit" onAction="#quitGameAction"/>
                </children>
             </VBox>
          </children>
