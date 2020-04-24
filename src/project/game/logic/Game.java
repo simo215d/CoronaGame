@@ -1,4 +1,4 @@
-package project.game.gameLogic;
+package project.game.logic;
 
 public class Game {
     public void start(){

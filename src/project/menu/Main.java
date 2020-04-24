@@ -5,7 +5,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import project.game.gameUI.GameController;
+import project.game.ui.GameController;
 
 public class Main extends Application {
     GameController gameController = new GameController();

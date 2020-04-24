@@ -1,9 +1,9 @@
-package project.game.gameUI;
+package project.game.ui;
 
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.stage.Stage;
-import project.game.gameLogic.Game;
+import project.game.logic.Game;
 
 public class GameController {
     private Game game = new Game();
