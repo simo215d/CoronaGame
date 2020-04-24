@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.VBox?>
 
 
-<GridPane alignment="center" hgap="10" prefHeight="600.0" prefWidth="800.0" vgap="10" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/11.0.1" fx:controller="project.Controller">
+<GridPane alignment="center" hgap="10" prefHeight="600.0" prefWidth="800.0" vgap="10" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/11.0.1" fx:controller="project.menu.MenuController">
    <columnConstraints>
       <ColumnConstraints />
    </columnConstraints>
@@ -21,7 +21,7 @@
    <children>
       <ImageView fitHeight="600.0" fitWidth="800.0">
          <image>
-            <Image url="@resources/Corona.png" />
+            <Image url="@../resources/Corona.png" />
          </image>
       </ImageView>
       <HBox prefHeight="600.0" prefWidth="800.0">
