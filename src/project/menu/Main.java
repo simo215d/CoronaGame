@@ -16,7 +16,7 @@ public class Main extends Application {
         main = this;
         Parent root = FXMLLoader.load(getClass().getResource("menu.fxml"));
         primaryStage.setTitle("Corona Game");
-        primaryStage.setScene(new Scene(root, 800, 600));
+        primaryStage.setScene(new Scene(root, GameController.SCREEN_X, GameController.SCREEN_Y));
         primaryStage.show();
     }
 
