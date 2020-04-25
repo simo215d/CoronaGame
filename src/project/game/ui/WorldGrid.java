@@ -1,6 +1,5 @@
 package project.game.ui;
 
-import javafx.scene.Scene;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 
