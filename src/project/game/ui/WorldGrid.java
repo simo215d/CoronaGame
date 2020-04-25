@@ -7,7 +7,9 @@ import javafx.scene.shape.Rectangle;
 public class WorldGrid {
     private final static int WORLD_X = 200;
     private final static int WORLD_Y = 150;
+
     public void render(GameController controller){
+        //this method is far from over, so no comments here
         System.out.println("grid is rendering");
         boolean shouldBeGreen = false;
         for (int i = 0; i < WORLD_X; i++) {

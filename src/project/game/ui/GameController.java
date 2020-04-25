@@ -22,14 +22,17 @@ public class GameController implements Observer {
     private Scene scene;
 
     public void newGame(Stage stage){
+        //observer pattern might not be the correct thing here but we will see later
         game.addObserver(this);
+        //create the image which will be the background
         worldImage = new ImageView(new Image(getClass().getResource("/project/resources/WorldMap.png").toString()));
         worldImage.setFitWidth(SCREEN_X);
         worldImage.setFitHeight(SCREEN_Y);
+        //group our things so its easier to manage later
         backgroundGroup.getChildren().add(worldImage);
         root.getChildren().add(backgroundGroup);
         root.getChildren().add(gridGroup);
-        scene = new Scene(root,800,600);
+        scene = new Scene(root,SCREEN_X,SCREEN_Y);
         stage.setScene(scene);
         game.start();
     }
