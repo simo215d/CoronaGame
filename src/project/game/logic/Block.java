@@ -7,6 +7,12 @@ public class Block {
     private String infectionStatus;
     private String continent;
 
+    public Block(String continent) {
+        infectionStatus = "alive";
+        this.continent = continent;
+
+    }
+
     public String getInfectionStatus() {
         return infectionStatus;
     }
