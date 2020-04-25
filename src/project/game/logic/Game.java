@@ -7,12 +7,16 @@ public class Game extends Observable {
     //TODO SHOULD THE CONTROLLER LOGIC MAYBE BE IN HERE???
     //TODO måske skal det ud på en seperat thread som opdaterer og sleeper
     //maybe a world object, and the world object contains the blocks. world has a render method which goes into ui package?
+
+    private World world = new World();
+
     public void start(){
         System.out.println("THE GAME HAS BEGUN!");
-
-        World world = new World();
         world.activateBlocks();
-        setChanged();
-        notifyObservers();
+        world.render();
+    }
+
+    public World getWorld(){
+        return world;
     }
 }

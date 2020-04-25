@@ -3,13 +3,24 @@ package project.game.ui;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 
-public class WorldGrid {
+import java.util.Observable;
+import java.util.Observer;
+
+public class WorldGrid implements Observer {
     private final static int WORLD_X = 200;
     private final static int WORLD_Y = 150;
 
-    public void render(GameController controller){
+    private GameController controller;
+
+    public WorldGrid(GameController controller){
+        this.controller = controller;
+    }
+
+    public void render(){
+        //TODO GET BLOCK AND THEIR X AND Y
         //this method is far from over, so no comments here
         System.out.println("grid is rendering");
+
         boolean shouldBeGreen = false;
         for (int i = 0; i < WORLD_X; i++) {
             if (i%2==0) shouldBeGreen=true;
@@ -27,5 +38,10 @@ public class WorldGrid {
                 controller.getGridGroup().getChildren().add(rectangle);
             }
         }
+    }
+
+    @Override
+    public void update(Observable o, Object arg) {
+        render();
     }
 }

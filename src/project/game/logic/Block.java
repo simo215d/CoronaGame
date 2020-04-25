@@ -1,16 +1,17 @@
 package project.game.logic;
 
-import javafx.stage.Stage;
-
 public class Block {
+    private int position_x;
+    private int position_y;
 
     private String infectionStatus;
     private String continent;
 
-    public Block(String continent) {
+    public Block(String continent, int x, int y) {
         infectionStatus = "alive";
         this.continent = continent;
-
+        position_x = x;
+        position_y = y;
     }
 
     public String getInfectionStatus() {
@@ -29,4 +30,11 @@ public class Block {
         this.continent = continent;
     }
 
+    public int getPosition_x(){
+        return position_x;
+    }
+
+    public int getPosition_y(){
+        return position_y;
+    }
 }
