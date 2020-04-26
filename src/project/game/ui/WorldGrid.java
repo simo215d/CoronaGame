@@ -21,7 +21,7 @@ public class WorldGrid implements Observer {
         for (int i = 0; i < World.WORLD_X; i++) {
             for (int j = 0; j < World.WORLD_Y; j++) {
                 //if current block is water, then no need to have a rectangle represent it
-                if (controller.getGame().getWorld().getBlocks()[i][j].getContinent().equals("water")){
+                if (controller.getGame().getWorld().getBlocks()[i][j].getContinent().equals(World.WATER)){
                     continue;
                 }
                 //rectangle dimensions
