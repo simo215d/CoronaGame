@@ -20,8 +20,8 @@ public class WorldGrid implements Observer {
         controller.getGridGroup().getChildren().clear();
         for (int i = 0; i < World.WORLD_X; i++) {
             for (int j = 0; j < World.WORLD_Y; j++) {
-                //if block is water or alive, then no need to have a rectangle represent it
-                if (controller.getGame().getWorld().getBlocks()[i][j].getInfectionStatus().equals("alive")){
+                //if current block is water, then no need to have a rectangle represent it
+                if (controller.getGame().getWorld().getBlocks()[i][j].getContinent().equals("water")){
                     continue;
                 }
                 //rectangle dimensions
@@ -33,9 +33,10 @@ public class WorldGrid implements Observer {
                 //create the rectangle and set color based on its infection status
                 Rectangle rectangle = new Rectangle(x,y,width,height);
                 switch (controller.getGame().getWorld().getBlocks()[i][j].getInfectionStatus()){
-                    case "dead": rectangle.setFill(Color.BLACK); break;
-                    case "infected": rectangle.setFill(Color.RED); break;
-                    case "cured": rectangle.setFill(Color.BLUE); break;
+                    case "alive": rectangle.setFill(Color.rgb(0,255,0,0.25)); break;
+                    case "dead": rectangle.setFill(Color.rgb(0,0,0,0.5)); break;
+                    case "infected": rectangle.setFill(Color.rgb(255,0,0,0.5)); break;
+                    case "cured": rectangle.setFill(Color.rgb(0,0,255,0.5)); break;
                 }
                 controller.getGridGroup().getChildren().add(rectangle);
             }
