@@ -37,4 +37,8 @@ public class GameController {
     public Group getGridGroup(){
         return gridGroup;
     }
+
+    public Game getGame(){
+        return game;
+    }
 }
