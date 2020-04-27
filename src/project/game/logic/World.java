@@ -29,6 +29,7 @@ public class World extends Observable {
         setNorthAmericaBlocks();
         setSouthAmericaBlocks();
         setAfricaBlocks();
+        setAustraliaBlocks();
         setWaterBlocks();
     }
 
@@ -282,6 +283,64 @@ public class World extends Observable {
                 blocks[i][location.getKey()].setContinent(AFRICA);
             }
         }
+    }
+
+    public void setAustraliaBlocks(){
+        //list of a pair of a y coordinate with 2 x coordinates which makes a line
+        ArrayList<Pair<Integer, Pair<Integer, Integer>>> AUMap = new ArrayList<>();
+        //mainland coordinates
+        AUMap.add(new Pair<>(93,new Pair<>(159,162)));
+        AUMap.add(new Pair<>(94,new Pair<>(156,162)));
+        AUMap.add(new Pair<>(95,new Pair<>(155,162)));
+        AUMap.add(new Pair<>(96,new Pair<>(155,167)));
+        AUMap.add(new Pair<>(97,new Pair<>(154,167)));
+        AUMap.add(new Pair<>(98,new Pair<>(151,168)));
+        AUMap.add(new Pair<>(99,new Pair<>(150,168)));
+        AUMap.add(new Pair<>(100,new Pair<>(150,169)));
+        AUMap.add(new Pair<>(101,new Pair<>(150,170)));
+        AUMap.add(new Pair<>(102,new Pair<>(151,170)));
+        AUMap.add(new Pair<>(103,new Pair<>(151,170)));
+        AUMap.add(new Pair<>(104,new Pair<>(151,170)));
+        AUMap.add(new Pair<>(105,new Pair<>(161,169)));
+        AUMap.add(new Pair<>(106,new Pair<>(162,169)));
+        AUMap.add(new Pair<>(107,new Pair<>(163,169)));
+        AUMap.add(new Pair<>(108,new Pair<>(163,169)));
+        AUMap.add(new Pair<>(109,new Pair<>(164,168)));
+
+        //south-west Australia tip
+        AUMap.add(new Pair<>(105,new Pair<>(151,157)));
+        AUMap.add(new Pair<>(106,new Pair<>(151,156)));
+
+        //North-east Australia tip
+        AUMap.add(new Pair<>(92,new Pair<>(164,165)));
+        AUMap.add(new Pair<>(93,new Pair<>(164,165)));
+        AUMap.add(new Pair<>(94,new Pair<>(164,166)));
+        AUMap.add(new Pair<>(95,new Pair<>(164,166)));
+
+        //island coordinates
+        AUMap.add(new Pair<>(111,new Pair<>(166,168)));
+        AUMap.add(new Pair<>(112,new Pair<>(166,167)));
+
+        //new Zealand
+        AUMap.add(new Pair<>(107,new Pair<>(180,181)));
+        AUMap.add(new Pair<>(108,new Pair<>(180,181)));
+        AUMap.add(new Pair<>(109,new Pair<>(180,182)));
+        AUMap.add(new Pair<>(110,new Pair<>(180,182)));
+        AUMap.add(new Pair<>(111,new Pair<>(179,180)));
+        AUMap.add(new Pair<>(112,new Pair<>(178,180)));
+        AUMap.add(new Pair<>(113,new Pair<>(177,179)));
+        AUMap.add(new Pair<>(114,new Pair<>(177,178)));
+
+
+
+
+
+        for (Pair<Integer, Pair<Integer, Integer>> location : AUMap){
+            for (int i = location.getValue().getKey(); i < location.getValue().getValue(); i++) {
+                blocks[i][location.getKey()].setContinent(AUSTRALIA);
+            }
+        }
+
     }
 
     //this method is called when all continents are established, then all the remaining unassigned blocks will become water
