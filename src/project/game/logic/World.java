@@ -27,6 +27,7 @@ public class World extends Observable {
             }
         }
         setNorthAmericaBlocks();
+        setSouthAmericaBlocks();
         setWaterBlocks();
     }
 
@@ -153,6 +154,63 @@ public class World extends Observable {
         for (Pair<Integer, Pair<Integer, Integer>> location : NAMap){
             for (int i = location.getValue().getKey(); i < location.getValue().getValue(); i++) {
                 blocks[i][location.getKey()].setContinent(NORTH_AMERICA);
+            }
+        }
+    }
+
+    private void setSouthAmericaBlocks(){
+        //list of a pair of a y coordinate with 2 x coordinates which makes a line
+        ArrayList<Pair<Integer, Pair<Integer, Integer>>> SAMap = new ArrayList<>();
+        //mainland coordinates
+        SAMap.add(new Pair<>(79,new Pair<>(58,61)));
+        SAMap.add(new Pair<>(80,new Pair<>(57,64)));
+        SAMap.add(new Pair<>(81,new Pair<>(57,65)));
+        SAMap.add(new Pair<>(82,new Pair<>(56,66)));
+        SAMap.add(new Pair<>(83,new Pair<>(56,69)));
+        SAMap.add(new Pair<>(84,new Pair<>(56,69)));
+        SAMap.add(new Pair<>(85,new Pair<>(55,69)));
+        SAMap.add(new Pair<>(86,new Pair<>(54,70)));
+        SAMap.add(new Pair<>(87,new Pair<>(54,74)));
+        SAMap.add(new Pair<>(88,new Pair<>(54,76)));
+        SAMap.add(new Pair<>(89,new Pair<>(54,78)));
+        SAMap.add(new Pair<>(90,new Pair<>(55,77)));
+        SAMap.add(new Pair<>(91,new Pair<>(56,77)));
+        SAMap.add(new Pair<>(92,new Pair<>(56,76)));
+        SAMap.add(new Pair<>(93,new Pair<>(56,76)));
+        SAMap.add(new Pair<>(94,new Pair<>(57,76)));
+        SAMap.add(new Pair<>(95,new Pair<>(57,76)));
+        SAMap.add(new Pair<>(96,new Pair<>(59,75)));
+        SAMap.add(new Pair<>(97,new Pair<>(60,75)));
+        SAMap.add(new Pair<>(98,new Pair<>(60,75)));
+        SAMap.add(new Pair<>(99,new Pair<>(60,74)));
+        SAMap.add(new Pair<>(100,new Pair<>(60,73)));
+        SAMap.add(new Pair<>(101,new Pair<>(60,71)));
+        SAMap.add(new Pair<>(102,new Pair<>(59,71)));
+        SAMap.add(new Pair<>(103,new Pair<>(59,70)));
+        SAMap.add(new Pair<>(104,new Pair<>(59,70)));
+        SAMap.add(new Pair<>(105,new Pair<>(59,69)));
+        SAMap.add(new Pair<>(106,new Pair<>(59,69)));
+        SAMap.add(new Pair<>(107,new Pair<>(59,68)));
+        SAMap.add(new Pair<>(108,new Pair<>(58,67)));
+        SAMap.add(new Pair<>(109,new Pair<>(58,66)));
+        SAMap.add(new Pair<>(110,new Pair<>(58,65)));
+        SAMap.add(new Pair<>(111,new Pair<>(58,64)));
+        SAMap.add(new Pair<>(112,new Pair<>(58,63)));
+        SAMap.add(new Pair<>(113,new Pair<>(58,63)));
+        SAMap.add(new Pair<>(114,new Pair<>(58,63)));
+        SAMap.add(new Pair<>(115,new Pair<>(57,62)));
+        SAMap.add(new Pair<>(116,new Pair<>(57,62)));
+        SAMap.add(new Pair<>(117,new Pair<>(57,61)));
+        SAMap.add(new Pair<>(118,new Pair<>(57,61)));
+        SAMap.add(new Pair<>(119,new Pair<>(57,61)));
+        //falkland
+        SAMap.add(new Pair<>(119,new Pair<>(65,67)));
+        SAMap.add(new Pair<>(120,new Pair<>(58,61)));
+        SAMap.add(new Pair<>(121,new Pair<>(58,62)));
+        SAMap.add(new Pair<>(122,new Pair<>(60,62)));
+        for (Pair<Integer, Pair<Integer, Integer>> location : SAMap){
+            for (int i = location.getValue().getKey(); i < location.getValue().getValue(); i++) {
+                blocks[i][location.getKey()].setContinent(SOUTH_AMERICA);
             }
         }
     }
