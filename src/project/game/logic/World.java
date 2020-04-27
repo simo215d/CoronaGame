@@ -30,6 +30,7 @@ public class World extends Observable {
         setSouthAmericaBlocks();
         setAfricaBlocks();
         setAustraliaBlocks();
+        setEuropeBlocks();
         setWaterBlocks();
     }
 
@@ -306,22 +307,18 @@ public class World extends Observable {
         AUMap.add(new Pair<>(107,new Pair<>(163,169)));
         AUMap.add(new Pair<>(108,new Pair<>(163,169)));
         AUMap.add(new Pair<>(109,new Pair<>(164,168)));
-
         //south-west Australia tip
         AUMap.add(new Pair<>(105,new Pair<>(151,157)));
         AUMap.add(new Pair<>(106,new Pair<>(151,156)));
-
         //North-east Australia tip
         AUMap.add(new Pair<>(92,new Pair<>(164,165)));
         AUMap.add(new Pair<>(93,new Pair<>(164,165)));
         AUMap.add(new Pair<>(94,new Pair<>(164,166)));
         AUMap.add(new Pair<>(95,new Pair<>(164,166)));
-
         //island coordinates
         AUMap.add(new Pair<>(111,new Pair<>(166,168)));
         AUMap.add(new Pair<>(112,new Pair<>(166,167)));
-
-        //new Zealand
+        //New Zealand
         AUMap.add(new Pair<>(107,new Pair<>(180,181)));
         AUMap.add(new Pair<>(108,new Pair<>(180,181)));
         AUMap.add(new Pair<>(109,new Pair<>(180,182)));
@@ -330,17 +327,100 @@ public class World extends Observable {
         AUMap.add(new Pair<>(112,new Pair<>(178,180)));
         AUMap.add(new Pair<>(113,new Pair<>(177,179)));
         AUMap.add(new Pair<>(114,new Pair<>(177,178)));
-
-
-
-
-
         for (Pair<Integer, Pair<Integer, Integer>> location : AUMap){
             for (int i = location.getValue().getKey(); i < location.getValue().getValue(); i++) {
                 blocks[i][location.getKey()].setContinent(AUSTRALIA);
             }
         }
+    }
 
+    private void setEuropeBlocks(){
+        //list of a pair of a y coordinate with 2 x coordinates which makes a line
+        ArrayList<Pair<Integer, Pair<Integer, Integer>>> EUMap = new ArrayList<>();
+        //scandinavia
+        EUMap.add(new Pair<>(35,new Pair<>(105,109)));
+        EUMap.add(new Pair<>(36,new Pair<>(103,109)));
+        EUMap.add(new Pair<>(37,new Pair<>(102,111)));
+        EUMap.add(new Pair<>(38,new Pair<>(102,114)));
+        EUMap.add(new Pair<>(39,new Pair<>(101,114)));
+        EUMap.add(new Pair<>(40,new Pair<>(100,106)));
+        EUMap.add(new Pair<>(41,new Pair<>(99,105)));
+        EUMap.add(new Pair<>(42,new Pair<>(98,104)));
+        EUMap.add(new Pair<>(43,new Pair<>(97,103)));
+        EUMap.add(new Pair<>(44,new Pair<>(97,103)));
+        EUMap.add(new Pair<>(45,new Pair<>(97,103)));
+        EUMap.add(new Pair<>(46,new Pair<>(97,103)));
+        EUMap.add(new Pair<>(47,new Pair<>(100,103)));
+        EUMap.add(new Pair<>(48,new Pair<>(100,103)));
+        EUMap.add(new Pair<>(49,new Pair<>(100,102)));
+        //denmark
+        EUMap.add(new Pair<>(48,new Pair<>(98,99)));
+        EUMap.add(new Pair<>(49,new Pair<>(98,99)));
+        EUMap.add(new Pair<>(50,new Pair<>(98,100)));
+        //finland
+        EUMap.add(new Pair<>(40,new Pair<>(106,111)));
+        EUMap.add(new Pair<>(41,new Pair<>(106,112)));
+        EUMap.add(new Pair<>(42,new Pair<>(105,112)));
+        EUMap.add(new Pair<>(43,new Pair<>(105,112)));
+        EUMap.add(new Pair<>(44,new Pair<>(105,112)));
+        EUMap.add(new Pair<>(45,new Pair<>(105,112)));
+        //east and central europe
+        EUMap.add(new Pair<>(46,new Pair<>(105,112)));
+        EUMap.add(new Pair<>(47,new Pair<>(105,112)));
+        EUMap.add(new Pair<>(48,new Pair<>(105,112)));
+        EUMap.add(new Pair<>(49,new Pair<>(105,112)));
+        EUMap.add(new Pair<>(50,new Pair<>(104,112)));
+        EUMap.add(new Pair<>(51,new Pair<>(97,112)));
+        EUMap.add(new Pair<>(52,new Pair<>(97,112)));
+        EUMap.add(new Pair<>(53,new Pair<>(96,112)));
+        EUMap.add(new Pair<>(54,new Pair<>(94,112)));
+        EUMap.add(new Pair<>(55,new Pair<>(92,112)));
+        EUMap.add(new Pair<>(56,new Pair<>(93,112)));
+        //balkan states
+        EUMap.add(new Pair<>(57,new Pair<>(101,109)));
+        EUMap.add(new Pair<>(58,new Pair<>(102,108)));
+        EUMap.add(new Pair<>(59,new Pair<>(103,108)));
+        EUMap.add(new Pair<>(60,new Pair<>(104,108)));
+        EUMap.add(new Pair<>(61,new Pair<>(104,106)));
+        EUMap.add(new Pair<>(62,new Pair<>(105,106)));
+        EUMap.add(new Pair<>(63,new Pair<>(105,106)));
+        //spain and southern france
+        EUMap.add(new Pair<>(57,new Pair<>(94,100)));
+        EUMap.add(new Pair<>(58,new Pair<>(94,98)));
+        EUMap.add(new Pair<>(59,new Pair<>(90,96)));
+        EUMap.add(new Pair<>(60,new Pair<>(90,96)));
+        EUMap.add(new Pair<>(61,new Pair<>(90,95)));
+        EUMap.add(new Pair<>(62,new Pair<>(90,94)));
+        EUMap.add(new Pair<>(63,new Pair<>(91,93)));
+        //italy
+        EUMap.add(new Pair<>(58,new Pair<>(99,100)));
+        EUMap.add(new Pair<>(59,new Pair<>(100,101)));
+        EUMap.add(new Pair<>(60,new Pair<>(101,102)));
+        EUMap.add(new Pair<>(61,new Pair<>(102,103)));
+        EUMap.add(new Pair<>(62,new Pair<>(100,102)));
+        //iceland
+        EUMap.add(new Pair<>(40,new Pair<>(83,87)));
+        EUMap.add(new Pair<>(41,new Pair<>(83,88)));
+        EUMap.add(new Pair<>(42,new Pair<>(84,87)));
+        //great britain
+        EUMap.add(new Pair<>(47,new Pair<>(92,93)));
+        EUMap.add(new Pair<>(48,new Pair<>(91,94)));
+        EUMap.add(new Pair<>(49,new Pair<>(92,93)));
+        EUMap.add(new Pair<>(50,new Pair<>(89,94)));
+        EUMap.add(new Pair<>(51,new Pair<>(89,95)));
+        EUMap.add(new Pair<>(52,new Pair<>(89,95)));
+        EUMap.add(new Pair<>(53,new Pair<>(92,94)));
+        //northern islands (norway?)
+        EUMap.add(new Pair<>(24,new Pair<>(103,108)));
+        EUMap.add(new Pair<>(25,new Pair<>(100,107)));
+        EUMap.add(new Pair<>(26,new Pair<>(100,106)));
+        EUMap.add(new Pair<>(27,new Pair<>(101,106)));
+        EUMap.add(new Pair<>(28,new Pair<>(101,103)));
+        for (Pair<Integer, Pair<Integer, Integer>> location : EUMap){
+            for (int i = location.getValue().getKey(); i < location.getValue().getValue(); i++) {
+                blocks[i][location.getKey()].setContinent(EUROPE);
+            }
+        }
     }
 
     //this method is called when all continents are established, then all the remaining unassigned blocks will become water
