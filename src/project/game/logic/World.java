@@ -28,6 +28,7 @@ public class World extends Observable {
         }
         setNorthAmericaBlocks();
         setSouthAmericaBlocks();
+        setAfricaBlocks();
         setWaterBlocks();
     }
 
@@ -211,6 +212,74 @@ public class World extends Observable {
         for (Pair<Integer, Pair<Integer, Integer>> location : SAMap){
             for (int i = location.getValue().getKey(); i < location.getValue().getValue(); i++) {
                 blocks[i][location.getKey()].setContinent(SOUTH_AMERICA);
+            }
+        }
+    }
+
+    private void setAfricaBlocks(){
+        //list of a pair of a y coordinate with 2 x coordinates which makes a line
+        ArrayList<Pair<Integer, Pair<Integer, Integer>>> AMap = new ArrayList<>();
+        //mainland coordinates
+        AMap.add(new Pair<>(63,new Pair<>(95,100)));
+        AMap.add(new Pair<>(64,new Pair<>(91,100)));
+        AMap.add(new Pair<>(65,new Pair<>(91,100)));
+        AMap.add(new Pair<>(66,new Pair<>(90,102)));
+        AMap.add(new Pair<>(67,new Pair<>(90,103)));
+        //upper east
+        AMap.add(new Pair<>(66,new Pair<>(104,106)));
+        AMap.add(new Pair<>(67,new Pair<>(104,110)));
+        //main
+        AMap.add(new Pair<>(68,new Pair<>(90,110)));
+        AMap.add(new Pair<>(69,new Pair<>(88,111)));
+        AMap.add(new Pair<>(70,new Pair<>(87,111)));
+        AMap.add(new Pair<>(71,new Pair<>(87,112)));
+        AMap.add(new Pair<>(72,new Pair<>(86,112)));
+        AMap.add(new Pair<>(73,new Pair<>(86,113)));
+        AMap.add(new Pair<>(74,new Pair<>(86,113)));
+        AMap.add(new Pair<>(75,new Pair<>(86,113)));
+        AMap.add(new Pair<>(76,new Pair<>(86,114)));
+        AMap.add(new Pair<>(77,new Pair<>(86,114)));
+        AMap.add(new Pair<>(78,new Pair<>(86,115)));
+        AMap.add(new Pair<>(79,new Pair<>(86,120)));
+        AMap.add(new Pair<>(80,new Pair<>(88,120)));
+        AMap.add(new Pair<>(81,new Pair<>(88,119)));
+        AMap.add(new Pair<>(82,new Pair<>(89,119)));
+        AMap.add(new Pair<>(83,new Pair<>(97,118)));
+        AMap.add(new Pair<>(84,new Pair<>(99,117)));
+        AMap.add(new Pair<>(85,new Pair<>(99,116)));
+        AMap.add(new Pair<>(86,new Pair<>(99,115)));
+        AMap.add(new Pair<>(87,new Pair<>(99,115)));
+        AMap.add(new Pair<>(88,new Pair<>(100,114)));
+        AMap.add(new Pair<>(89,new Pair<>(100,114)));
+        AMap.add(new Pair<>(90,new Pair<>(100,114)));
+        AMap.add(new Pair<>(91,new Pair<>(101,114)));
+        AMap.add(new Pair<>(92,new Pair<>(101,115)));
+        AMap.add(new Pair<>(93,new Pair<>(101,115)));
+        AMap.add(new Pair<>(94,new Pair<>(100,115)));
+        AMap.add(new Pair<>(95,new Pair<>(100,114)));
+        AMap.add(new Pair<>(96,new Pair<>(100,113)));
+        AMap.add(new Pair<>(97,new Pair<>(100,112)));
+        AMap.add(new Pair<>(98,new Pair<>(100,112)));
+        AMap.add(new Pair<>(99,new Pair<>(101,112)));
+        AMap.add(new Pair<>(100,new Pair<>(101,112)));
+        AMap.add(new Pair<>(101,new Pair<>(101,111)));
+        AMap.add(new Pair<>(102,new Pair<>(101,111)));
+        AMap.add(new Pair<>(103,new Pair<>(102,110)));
+        AMap.add(new Pair<>(104,new Pair<>(102,110)));
+        AMap.add(new Pair<>(105,new Pair<>(103,109)));
+        AMap.add(new Pair<>(106,new Pair<>(103,108)));
+        //madagascar
+        AMap.add(new Pair<>(93,new Pair<>(118,119)));
+        AMap.add(new Pair<>(94,new Pair<>(117,119)));
+        AMap.add(new Pair<>(95,new Pair<>(117,119)));
+        AMap.add(new Pair<>(96,new Pair<>(116,119)));
+        AMap.add(new Pair<>(97,new Pair<>(116,119)));
+        AMap.add(new Pair<>(98,new Pair<>(115,119)));
+        AMap.add(new Pair<>(99,new Pair<>(115,118)));
+        AMap.add(new Pair<>(100,new Pair<>(115,118)));
+        for (Pair<Integer, Pair<Integer, Integer>> location : AMap){
+            for (int i = location.getValue().getKey(); i < location.getValue().getValue(); i++) {
+                blocks[i][location.getKey()].setContinent(AFRICA);
             }
         }
     }
