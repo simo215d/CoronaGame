@@ -1,6 +1,11 @@
 package project.game.logic;
 
 public class Block {
+    public static final String NEUTRAL = "Neutral";
+    public static final String INFECTED = "Infected";
+    public static final String DEAD = "Dead";
+    public static final String CURED = "Cured";
+
     private int position_x;
     private int position_y;
 

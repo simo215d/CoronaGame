@@ -20,6 +20,8 @@ public class World extends Observable {
 
     private Block[][] blocks = new Block[WORLD_X][WORLD_Y];
 
+    private Continent continent = new Continent(blocks);
+
     public void activateBlocks() {
         for (int i = 0; i < WORLD_X ; i++) {
             for (int j = 0; j < WORLD_Y ; j++) {
@@ -608,6 +610,10 @@ public class World extends Observable {
         setChanged();
         notifyObservers();
     }
+    public Continent getContinent(){
+        return continent;
+    }
+
 
     public Block[][] getBlocks(){
         return blocks;

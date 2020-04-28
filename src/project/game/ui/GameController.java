@@ -11,6 +11,7 @@ public class GameController {
     public static final int SCREEN_X = 800;
     public static final int SCREEN_Y = 600;
     private Game game = new Game();
+    private ClickOnBlock clickOnBlock;
     private WorldGrid worldGrid = new WorldGrid(this);
     private ImageView worldImage;
     private Group gridGroup = new Group();
@@ -32,6 +33,10 @@ public class GameController {
         scene = new Scene(root,SCREEN_X,SCREEN_Y);
         stage.setScene(scene);
         game.start();
+        //instantiate clickOnBlock
+        clickOnBlock = new ClickOnBlock(scene, game.getWorld());
+
+
     }
 
     public Group getGridGroup(){
