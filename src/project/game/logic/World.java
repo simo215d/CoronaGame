@@ -480,7 +480,6 @@ public class World extends Observable {
         ASIAMap.add(new Pair<>(77,new Pair<>(143,148)));
         ASIAMap.add(new Pair<>(78,new Pair<>(143,148)));
         ASIAMap.add(new Pair<>(79,new Pair<>(146,148)));
-
         //East Russia Tip
         ASIAMap.add(new Pair<>(72,new Pair<>(129,139)));
         ASIAMap.add(new Pair<>(73,new Pair<>(130,137)));
@@ -506,7 +505,6 @@ public class World extends Observable {
         ASIAMap.add(new Pair<>(44,new Pair<>(175,180)));
         ASIAMap.add(new Pair<>(45,new Pair<>(174,179)));
         ASIAMap.add(new Pair<>(46,new Pair<>(173,175)));
-
         ASIAMap.add(new Pair<>(47,new Pair<>(172,175)));
         ASIAMap.add(new Pair<>(48,new Pair<>(171,174)));
         ASIAMap.add(new Pair<>(49,new Pair<>(171,174)));
@@ -556,7 +554,6 @@ public class World extends Observable {
         ASIAMap.add(new Pair<>(62,new Pair<>(156,158)));
         ASIAMap.add(new Pair<>(63,new Pair<>(156,158)));
         ASIAMap.add(new Pair<>(64,new Pair<>(156,158)));
-
         //Philipines
         ASIAMap.add(new Pair<>(80,new Pair<>(143,144)));
         ASIAMap.add(new Pair<>(81,new Pair<>(143,144)));
@@ -567,7 +564,6 @@ public class World extends Observable {
         ASIAMap.add(new Pair<>(86,new Pair<>(143,146)));
         ASIAMap.add(new Pair<>(87,new Pair<>(144,147)));
         ASIAMap.add(new Pair<>(88,new Pair<>(145,147)));
-
         ASIAMap.add(new Pair<>(75,new Pair<>(153,155)));
         ASIAMap.add(new Pair<>(76,new Pair<>(153,155)));
         ASIAMap.add(new Pair<>(77,new Pair<>(153,155)));
@@ -577,7 +573,6 @@ public class World extends Observable {
         ASIAMap.add(new Pair<>(81,new Pair<>(154,157)));
         ASIAMap.add(new Pair<>(82,new Pair<>(151,157)));
         ASIAMap.add(new Pair<>(83,new Pair<>(150,152)));
-
         ASIAMap.add(new Pair<>(84,new Pair<>(149,160)));
         ASIAMap.add(new Pair<>(85,new Pair<>(148,160)));
         ASIAMap.add(new Pair<>(86,new Pair<>(148,162)));
@@ -586,20 +581,10 @@ public class World extends Observable {
         ASIAMap.add(new Pair<>(89,new Pair<>(147,151)));
         ASIAMap.add(new Pair<>(90,new Pair<>(147,157)));
         ASIAMap.add(new Pair<>(91,new Pair<>(153,158)));
-
         ASIAMap.add(new Pair<>(88,new Pair<>(160,170)));
         ASIAMap.add(new Pair<>(89,new Pair<>(162,169)));
         ASIAMap.add(new Pair<>(90,new Pair<>(162,168)));
         ASIAMap.add(new Pair<>(91,new Pair<>(167,169)));
-
-
-
-
-
-
-
-
-
 
         for (Pair<Integer, Pair<Integer, Integer>> location : ASIAMap){
             for (int i = location.getValue().getKey(); i < location.getValue().getValue(); i++) {
@@ -607,7 +592,6 @@ public class World extends Observable {
             }
         }
     }
-
 
     //this method is called when all continents are established, then all the remaining unassigned blocks will become water
     private void setWaterBlocks(){
