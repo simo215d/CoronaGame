@@ -32,6 +32,7 @@ public class World extends Observable {
         setAustraliaBlocks();
         setEuropeBlocks();
         setWaterBlocks();
+        setAsiaBlocks();
     }
 
     private void setNorthAmericaBlocks(){
@@ -292,6 +293,7 @@ public class World extends Observable {
         //mainland coordinates
         AUMap.add(new Pair<>(93,new Pair<>(159,162)));
         AUMap.add(new Pair<>(94,new Pair<>(156,162)));
+
         AUMap.add(new Pair<>(95,new Pair<>(155,162)));
         AUMap.add(new Pair<>(96,new Pair<>(155,167)));
         AUMap.add(new Pair<>(97,new Pair<>(154,167)));
@@ -422,6 +424,190 @@ public class World extends Observable {
             }
         }
     }
+
+    private void setAsiaBlocks() {
+        ArrayList<Pair<Integer, Pair<Integer, Integer>>> ASIAMap = new ArrayList<>();
+        //Central Russia
+        ASIAMap.add(new Pair<>(28,new Pair<>(144,147)));
+        ASIAMap.add(new Pair<>(29,new Pair<>(140,150)));
+        ASIAMap.add(new Pair<>(30,new Pair<>(138,150)));
+        ASIAMap.add(new Pair<>(31,new Pair<>(137,150)));
+        ASIAMap.add(new Pair<>(32,new Pair<>(134,158)));
+        ASIAMap.add(new Pair<>(33,new Pair<>(128,168)));
+        ASIAMap.add(new Pair<>(34,new Pair<>(127,169)));
+        ASIAMap.add(new Pair<>(35,new Pair<>(127,173)));
+        ASIAMap.add(new Pair<>(36,new Pair<>(127,181)));
+        ASIAMap.add(new Pair<>(37,new Pair<>(124,184)));
+        ASIAMap.add(new Pair<>(38,new Pair<>(119,185)));
+        ASIAMap.add(new Pair<>(39,new Pair<>(115,188)));
+        ASIAMap.add(new Pair<>(40,new Pair<>(114,188)));
+        ASIAMap.add(new Pair<>(41,new Pair<>(114,187)));
+        ASIAMap.add(new Pair<>(42,new Pair<>(112,183)));
+        ASIAMap.add(new Pair<>(43,new Pair<>(112,182)));
+        ASIAMap.add(new Pair<>(44,new Pair<>(112,180)));
+        ASIAMap.add(new Pair<>(45,new Pair<>(112,171)));
+        ASIAMap.add(new Pair<>(46,new Pair<>(112,164)));
+        ASIAMap.add(new Pair<>(47,new Pair<>(112,163)));
+        ASIAMap.add(new Pair<>(48,new Pair<>(112,163)));
+        ASIAMap.add(new Pair<>(49,new Pair<>(112,162)));
+        ASIAMap.add(new Pair<>(50,new Pair<>(112,162)));
+        ASIAMap.add(new Pair<>(51,new Pair<>(112,164)));
+        ASIAMap.add(new Pair<>(52,new Pair<>(112,164)));
+        ASIAMap.add(new Pair<>(53,new Pair<>(112,164)));
+        ASIAMap.add(new Pair<>(54,new Pair<>(112,164)));
+        ASIAMap.add(new Pair<>(55,new Pair<>(112,163)));
+        ASIAMap.add(new Pair<>(56,new Pair<>(112,163)));
+        ASIAMap.add(new Pair<>(57,new Pair<>(112,162)));
+        ASIAMap.add(new Pair<>(58,new Pair<>(114,161)));
+        ASIAMap.add(new Pair<>(59,new Pair<>(115,159)));
+        ASIAMap.add(new Pair<>(60,new Pair<>(108,158)));
+        ASIAMap.add(new Pair<>(61,new Pair<>(108,153)));
+        ASIAMap.add(new Pair<>(62,new Pair<>(108,153)));
+        ASIAMap.add(new Pair<>(63,new Pair<>(108,154)));
+        ASIAMap.add(new Pair<>(64,new Pair<>(112,154)));
+        ASIAMap.add(new Pair<>(65,new Pair<>(112,154)));
+        ASIAMap.add(new Pair<>(66,new Pair<>(111,154)));
+        ASIAMap.add(new Pair<>(67,new Pair<>(111,154)));
+        ASIAMap.add(new Pair<>(68,new Pair<>(111,154)));
+        ASIAMap.add(new Pair<>(69,new Pair<>(120,154)));
+        ASIAMap.add(new Pair<>(70,new Pair<>(123,154)));
+        ASIAMap.add(new Pair<>(71,new Pair<>(128,153)));
+        ASIAMap.add(new Pair<>(72,new Pair<>(140,150)));
+        ASIAMap.add(new Pair<>(73,new Pair<>(140,148)));
+        ASIAMap.add(new Pair<>(74,new Pair<>(140,147)));
+        ASIAMap.add(new Pair<>(75,new Pair<>(141,147)));
+        ASIAMap.add(new Pair<>(76,new Pair<>(141,148)));
+        ASIAMap.add(new Pair<>(77,new Pair<>(143,148)));
+        ASIAMap.add(new Pair<>(78,new Pair<>(143,148)));
+        ASIAMap.add(new Pair<>(79,new Pair<>(146,148)));
+
+        //East Russia Tip
+        ASIAMap.add(new Pair<>(72,new Pair<>(129,139)));
+        ASIAMap.add(new Pair<>(73,new Pair<>(130,137)));
+        ASIAMap.add(new Pair<>(74,new Pair<>(130,136)));
+        ASIAMap.add(new Pair<>(75,new Pair<>(130,135)));
+        ASIAMap.add(new Pair<>(76,new Pair<>(131,135)));
+        ASIAMap.add(new Pair<>(77,new Pair<>(131,134)));
+        ASIAMap.add(new Pair<>(78,new Pair<>(131,134)));
+        ASIAMap.add(new Pair<>(79,new Pair<>(132,134)));
+        ASIAMap.add(new Pair<>(80,new Pair<>(132,134)));
+        //East-west Russia Tip
+        ASIAMap.add(new Pair<>(68,new Pair<>(110,118)));
+        ASIAMap.add(new Pair<>(69,new Pair<>(112,118)));
+        ASIAMap.add(new Pair<>(70,new Pair<>(112,119)));
+        ASIAMap.add(new Pair<>(71,new Pair<>(113,123)));
+        ASIAMap.add(new Pair<>(72,new Pair<>(113,123)));
+        ASIAMap.add(new Pair<>(73,new Pair<>(114,123)));
+        ASIAMap.add(new Pair<>(74,new Pair<>(114,123)));
+        ASIAMap.add(new Pair<>(75,new Pair<>(115,122)));
+        ASIAMap.add(new Pair<>(76,new Pair<>(115,121)));
+        ASIAMap.add(new Pair<>(77,new Pair<>(115,119)));
+        //South Russia Tip
+        ASIAMap.add(new Pair<>(44,new Pair<>(175,180)));
+        ASIAMap.add(new Pair<>(45,new Pair<>(174,179)));
+        ASIAMap.add(new Pair<>(46,new Pair<>(173,175)));
+
+        ASIAMap.add(new Pair<>(47,new Pair<>(172,175)));
+        ASIAMap.add(new Pair<>(48,new Pair<>(171,174)));
+        ASIAMap.add(new Pair<>(49,new Pair<>(171,174)));
+        ASIAMap.add(new Pair<>(50,new Pair<>(171,174)));
+        ASIAMap.add(new Pair<>(51,new Pair<>(171,173)));
+        ASIAMap.add(new Pair<>(52,new Pair<>(171,173)));
+        //Nothern Russia Islands
+        ASIAMap.add(new Pair<>(22,new Pair<>(121,126)));
+        ASIAMap.add(new Pair<>(23,new Pair<>(116,126)));
+        ASIAMap.add(new Pair<>(24,new Pair<>(118,124)));
+        ASIAMap.add(new Pair<>(23,new Pair<>(140,142)));
+        ASIAMap.add(new Pair<>(24,new Pair<>(139,143)));
+        ASIAMap.add(new Pair<>(25,new Pair<>(140,146)));
+        ASIAMap.add(new Pair<>(26,new Pair<>(143,147)));
+        ASIAMap.add(new Pair<>(28,new Pair<>(126,129)));
+        ASIAMap.add(new Pair<>(29,new Pair<>(124,128)));
+        ASIAMap.add(new Pair<>(30,new Pair<>(122,125)));
+        ASIAMap.add(new Pair<>(31,new Pair<>(122,123)));
+        ASIAMap.add(new Pair<>(32,new Pair<>(121,122)));
+        ASIAMap.add(new Pair<>(33,new Pair<>(120,122)));
+        ASIAMap.add(new Pair<>(34,new Pair<>(120,122)));
+        ASIAMap.add(new Pair<>(35,new Pair<>(121,122)));
+        ASIAMap.add(new Pair<>(29,new Pair<>(162,165)));
+        ASIAMap.add(new Pair<>(30,new Pair<>(162,169)));
+        ASIAMap.add(new Pair<>(31,new Pair<>(163,166)));
+        ASIAMap.add(new Pair<>(32,new Pair<>(164,165)));
+        ASIAMap.add(new Pair<>(34,new Pair<>(182,185)));
+        ASIAMap.add(new Pair<>(35,new Pair<>(182,185)));
+        //South slim Island
+        ASIAMap.add(new Pair<>(51,new Pair<>(165,166)));
+        ASIAMap.add(new Pair<>(52,new Pair<>(165,166)));
+        ASIAMap.add(new Pair<>(53,new Pair<>(165,166)));
+        ASIAMap.add(new Pair<>(54,new Pair<>(165,166)));
+        ASIAMap.add(new Pair<>(55,new Pair<>(165,166)));
+        ASIAMap.add(new Pair<>(56,new Pair<>(164,165)));
+        ASIAMap.add(new Pair<>(57,new Pair<>(164,169)));
+        ASIAMap.add(new Pair<>(58,new Pair<>(164,167)));
+        ASIAMap.add(new Pair<>(59,new Pair<>(163,166)));
+        ASIAMap.add(new Pair<>(60,new Pair<>(163,165)));
+        ASIAMap.add(new Pair<>(61,new Pair<>(163,165)));
+        ASIAMap.add(new Pair<>(62,new Pair<>(163,165)));
+        ASIAMap.add(new Pair<>(63,new Pair<>(161,164)));
+        ASIAMap.add(new Pair<>(64,new Pair<>(159,164)));
+        ASIAMap.add(new Pair<>(65,new Pair<>(158,162)));
+        ASIAMap.add(new Pair<>(66,new Pair<>(158,160)));
+        ASIAMap.add(new Pair<>(61,new Pair<>(156,158)));
+        ASIAMap.add(new Pair<>(62,new Pair<>(156,158)));
+        ASIAMap.add(new Pair<>(63,new Pair<>(156,158)));
+        ASIAMap.add(new Pair<>(64,new Pair<>(156,158)));
+
+        //Philipines
+        ASIAMap.add(new Pair<>(80,new Pair<>(143,144)));
+        ASIAMap.add(new Pair<>(81,new Pair<>(143,144)));
+        ASIAMap.add(new Pair<>(82,new Pair<>(141,145)));
+        ASIAMap.add(new Pair<>(83,new Pair<>(141,145)));
+        ASIAMap.add(new Pair<>(84,new Pair<>(142,145)));
+        ASIAMap.add(new Pair<>(85,new Pair<>(143,146)));
+        ASIAMap.add(new Pair<>(86,new Pair<>(143,146)));
+        ASIAMap.add(new Pair<>(87,new Pair<>(144,147)));
+        ASIAMap.add(new Pair<>(88,new Pair<>(145,147)));
+
+        ASIAMap.add(new Pair<>(75,new Pair<>(153,155)));
+        ASIAMap.add(new Pair<>(76,new Pair<>(153,155)));
+        ASIAMap.add(new Pair<>(77,new Pair<>(153,155)));
+        ASIAMap.add(new Pair<>(78,new Pair<>(153,157)));
+        ASIAMap.add(new Pair<>(79,new Pair<>(154,157)));
+        ASIAMap.add(new Pair<>(80,new Pair<>(154,157)));
+        ASIAMap.add(new Pair<>(81,new Pair<>(154,157)));
+        ASIAMap.add(new Pair<>(82,new Pair<>(151,157)));
+        ASIAMap.add(new Pair<>(83,new Pair<>(150,152)));
+
+        ASIAMap.add(new Pair<>(84,new Pair<>(149,160)));
+        ASIAMap.add(new Pair<>(85,new Pair<>(148,160)));
+        ASIAMap.add(new Pair<>(86,new Pair<>(148,162)));
+        ASIAMap.add(new Pair<>(87,new Pair<>(148,165)));
+        ASIAMap.add(new Pair<>(88,new Pair<>(153,155)));
+        ASIAMap.add(new Pair<>(89,new Pair<>(147,151)));
+        ASIAMap.add(new Pair<>(90,new Pair<>(147,157)));
+        ASIAMap.add(new Pair<>(91,new Pair<>(153,158)));
+
+        ASIAMap.add(new Pair<>(88,new Pair<>(160,170)));
+        ASIAMap.add(new Pair<>(89,new Pair<>(162,169)));
+        ASIAMap.add(new Pair<>(90,new Pair<>(162,168)));
+        ASIAMap.add(new Pair<>(91,new Pair<>(167,169)));
+
+
+
+
+
+
+
+
+
+
+        for (Pair<Integer, Pair<Integer, Integer>> location : ASIAMap){
+            for (int i = location.getValue().getKey(); i < location.getValue().getValue(); i++) {
+                blocks[i][location.getKey()].setContinent(ASIA);
+            }
+        }
+    }
+
 
     //this method is called when all continents are established, then all the remaining unassigned blocks will become water
     private void setWaterBlocks(){
