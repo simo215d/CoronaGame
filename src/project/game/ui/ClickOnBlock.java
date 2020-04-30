@@ -25,10 +25,9 @@ public class ClickOnBlock {
                 //4 comes from the scale factor between the number of blocks and size of the screen. x=800/200 and 600/150
                 int x = (int)(mouseEvent.getSceneX() / 4);
                 int y = (int)(mouseEvent.getSceneY() / 4);
-                //if we are ready to place then place and nothing more.
+                //if we are ready to place then place.
                 if (VirusPlacer.readyToPlace){
                     virusPlacer.placeVirus(x,y);
-                    return;
                 }
                 //System.out.println("X; " + x + " Y; " + y);
                 //get a continent based on the x and y. get values from continent based on the continent
@@ -45,12 +44,7 @@ public class ClickOnBlock {
     }
 
     private void displayContinentInfo(String continent, int totalBlocks, int neutralBlocks, int infectedBlocks, int deadBlocks, int curedBlocks){
-        infoGroup.getChildren().clear();
-        //Rectangle backgroundRectangle = new Rectangle(0,0,500,40);
-        //backgroundRectangle.setFill(Color.TRANSPARENT);
-        Label label = new Label("Selected continent: "+continent+"\nTotal blocks: "+totalBlocks+". \nNeutral blocks: "+neutralBlocks+". \nInfected blocks: "+infectedBlocks+". \nDead blocks: "+deadBlocks+". \nCured blocks: "+curedBlocks);
-        label.setStyle("-fx-text-fill: white");
-        //infoGroup.getChildren().add(backgroundRectangle);
-        infoGroup.getChildren().add(label);
+        String infoText = "Selected continent: "+continent+"\nTotal blocks: "+totalBlocks+". \nNeutral blocks: "+neutralBlocks+". \nInfected blocks: "+infectedBlocks+". \nDead blocks: "+deadBlocks+". \nCured blocks: "+curedBlocks;
+        ((Label)infoGroup.getChildren().get(0)).setText(infoText);
     }
 }

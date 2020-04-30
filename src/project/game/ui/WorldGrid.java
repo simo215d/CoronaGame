@@ -2,6 +2,7 @@ package project.game.ui;
 
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
+import project.game.logic.Block;
 import project.game.logic.World;
 
 import java.util.Observable;
@@ -33,10 +34,10 @@ public class WorldGrid implements Observer {
                 //create the rectangle and set color based on its infection status
                 Rectangle rectangle = new Rectangle(x,y,width,height);
                 switch (controller.getGame().getWorld().getBlocks()[i][j].getInfectionStatus()){
-                    case "alive": rectangle.setFill(Color.rgb(0,255,0,0.25)); break;
-                    case "dead": rectangle.setFill(Color.rgb(0,0,0,0.5)); break;
-                    case "infected": rectangle.setFill(Color.rgb(255,0,0,0.5)); break;
-                    case "cured": rectangle.setFill(Color.rgb(0,0,255,0.5)); break;
+                    case Block.NEUTRAL: rectangle.setFill(Color.rgb(0,255,0,0.25)); break;
+                    case Block.DEAD: rectangle.setFill(Color.rgb(0,0,0,0.5)); break;
+                    case Block.INFECTED: rectangle.setFill(Color.rgb(255,0,0,0.5)); break;
+                    case Block.CURED: rectangle.setFill(Color.rgb(0,0,255,0.5)); break;
                 }
                 controller.getGridGroup().getChildren().add(rectangle);
             }

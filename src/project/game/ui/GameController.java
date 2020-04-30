@@ -2,6 +2,7 @@ package project.game.ui;
 
 import javafx.scene.Group;
 import javafx.scene.Scene;
+import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.HBox;
@@ -30,6 +31,11 @@ public class GameController {
         worldImage = new ImageView(new Image(getClass().getResource("/project/resources/WorldMap.png").toString()));
         worldImage.setFitWidth(SCREEN_X);
         worldImage.setFitHeight(SCREEN_Y);
+        //info label is needed so we can set some space
+        Label infoLabel = new Label();
+        infoLabel.setMinWidth((double)SCREEN_X/2-VirusPlacer.width/2);
+        infoLabel.setStyle("-fx-text-fill: white");
+        infoGroup.getChildren().add(infoLabel);
         //group our things so its easier to manage later
         backgroundGroup.getChildren().add(worldImage);
         root.getChildren().add(backgroundGroup);

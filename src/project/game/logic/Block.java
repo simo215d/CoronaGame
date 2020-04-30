@@ -14,7 +14,7 @@ public class Block {
     private String continent;
 
     public Block(String continent, int x, int y) {
-        infectionStatus = "alive";
+        infectionStatus = NEUTRAL;
         this.continent = continent;
         position_x = x;
         position_y = y;
