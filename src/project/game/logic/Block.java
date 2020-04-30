@@ -1,6 +1,7 @@
 package project.game.logic;
 
 public class Block {
+    //we could have made enums with this if we were smarter
     public static final String NEUTRAL = "Neutral";
     public static final String INFECTED = "Infected";
     public static final String DEAD = "Dead";

@@ -4,6 +4,7 @@ import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
 import project.game.logic.Game;
 
@@ -17,6 +18,8 @@ public class GameController {
     private Group backgroundGroup = new Group();
     private Group gridGroup = new Group();
     private Group infoGroup = new Group();
+    private Group infectGroup = new Group();
+    private HBox topHBox = new HBox(infoGroup, infectGroup);
     private Group root = new Group();
     private Scene scene;
 
@@ -31,12 +34,12 @@ public class GameController {
         backgroundGroup.getChildren().add(worldImage);
         root.getChildren().add(backgroundGroup);
         root.getChildren().add(gridGroup);
-        root.getChildren().add(infoGroup);
+        root.getChildren().add(topHBox);
         scene = new Scene(root,SCREEN_X,SCREEN_Y);
         stage.setScene(scene);
         game.start();
         //instantiate clickOnBlock
-        clickOnBlock = new ClickOnBlock(scene, game.getWorld(), infoGroup);
+        clickOnBlock = new ClickOnBlock(scene, game.getWorld(), infoGroup, infectGroup);
     }
 
     public Group getGridGroup(){

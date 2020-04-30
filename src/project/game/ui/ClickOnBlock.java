@@ -12,17 +12,24 @@ public class ClickOnBlock {
     private Scene scene;
     private World world;
     private Group infoGroup;
+    private VirusPlacer virusPlacer;
 
-    public ClickOnBlock(Scene scene, World world, Group infoGroup){
+    public ClickOnBlock(Scene scene, World world, Group infoGroup, Group virusGroup){
         this.scene = scene;
         this.world = world;
         this.infoGroup = infoGroup;
+        virusPlacer = new VirusPlacer(virusGroup, world.getVirusManager());
         scene.setOnMouseClicked(new EventHandler<javafx.scene.input.MouseEvent>()  {
             @Override
             public void handle(javafx.scene.input.MouseEvent mouseEvent) {
                 //4 comes from the scale factor between the number of blocks and size of the screen. x=800/200 and 600/150
                 int x = (int)(mouseEvent.getSceneX() / 4);
                 int y = (int)(mouseEvent.getSceneY() / 4);
+                //if we are ready to place then place and nothing more.
+                if (VirusPlacer.readyToPlace){
+                    virusPlacer.placeVirus(x,y);
+                    return;
+                }
                 //System.out.println("X; " + x + " Y; " + y);
                 //get a continent based on the x and y. get values from continent based on the continent
                 String continent = world.getBlocks()[x][y].getContinent();
@@ -32,6 +39,7 @@ public class ClickOnBlock {
                 int deadBlocks = world.getContinent().getDeadBlocks(world.getBlocks()[x][y].getContinent());
                 int curedBlocks = world.getContinent().getCuredBlocks(world.getBlocks()[x][y].getContinent());
                 displayContinentInfo(continent, totalBlocks, neutralBlocks, infectedBlocks, deadBlocks, curedBlocks);
+                System.out.println("successfully clicked a continent and you should see info!");
             }
         });
     }

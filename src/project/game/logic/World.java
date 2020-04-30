@@ -21,6 +21,7 @@ public class World extends Observable {
     private Block[][] blocks = new Block[WORLD_X][WORLD_Y];
 
     private Continent continent = new Continent(blocks);
+    private VirusManager virusManager = new VirusManager(this);
 
     public void activateBlocks() {
         for (int i = 0; i < WORLD_X ; i++) {
@@ -614,6 +615,9 @@ public class World extends Observable {
         return continent;
     }
 
+    public VirusManager getVirusManager(){
+        return virusManager;
+    }
 
     public Block[][] getBlocks(){
         return blocks;
