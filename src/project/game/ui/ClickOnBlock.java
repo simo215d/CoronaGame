@@ -27,6 +27,10 @@ public class ClickOnBlock {
                 int y = (int)(mouseEvent.getSceneY() / 4);
                 //if we are ready to place then place.
                 if (VirusPlacer.readyToPlace){
+                    //we cant infect water
+                    if (world.getBlocks()[x][y].getContinent().equals(World.WATER)){
+                        return;
+                    }
                     virusPlacer.placeVirus(x,y);
                 }
                 //System.out.println("X; " + x + " Y; " + y);
