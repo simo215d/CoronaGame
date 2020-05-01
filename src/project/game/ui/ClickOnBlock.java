@@ -18,7 +18,7 @@ public class ClickOnBlock {
         this.scene = scene;
         this.world = world;
         this.infoGroup = infoGroup;
-        virusPlacer = new VirusPlacer(virusGroup, world.getVirusManager());
+        virusPlacer = new VirusPlacer(virusGroup, world.getVirusManager(), scene);
         scene.setOnMouseClicked(new EventHandler<javafx.scene.input.MouseEvent>()  {
             @Override
             public void handle(javafx.scene.input.MouseEvent mouseEvent) {

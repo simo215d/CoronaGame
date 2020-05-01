@@ -18,4 +18,8 @@ public class VirusManager {
         world.render();
         System.out.println("successfully placed and rendered");
     }
+
+    public int getAvailableVirusPlacements(){
+        return availableVirusPlacements;
+    }
 }
