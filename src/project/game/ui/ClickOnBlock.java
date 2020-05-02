@@ -32,6 +32,7 @@ public class ClickOnBlock {
                         return;
                     }
                     virusPlacer.placeVirus(x,y);
+                    return;
                 }
                 //System.out.println("X; " + x + " Y; " + y);
                 //get a continent based on the x and y. get values from continent based on the continent
@@ -50,5 +51,6 @@ public class ClickOnBlock {
     private void displayContinentInfo(String continent, int totalBlocks, int neutralBlocks, int infectedBlocks, int deadBlocks, int curedBlocks){
         String infoText = "Selected continent: "+continent+"\nTotal blocks: "+totalBlocks+". \nNeutral blocks: "+neutralBlocks+". \nInfected blocks: "+infectedBlocks+". \nDead blocks: "+deadBlocks+". \nCured blocks: "+curedBlocks;
         ((Label)infoGroup.getChildren().get(0)).setText(infoText);
+        world.setContinentHighlight(continent);
     }
 }

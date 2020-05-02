@@ -12,6 +12,7 @@ public class Block {
 
     private String infectionStatus;
     private String continent;
+    private boolean continentIsHighlighted = false;
 
     public Block(String continent, int x, int y) {
         infectionStatus = NEUTRAL;
@@ -42,5 +43,13 @@ public class Block {
 
     public int getPosition_y(){
         return position_y;
+    }
+
+    public void setContinentIsHighlighted(boolean b){
+        continentIsHighlighted = b;
+    }
+
+    public boolean isContinentIsHighlighted(){
+        return continentIsHighlighted;
     }
 }

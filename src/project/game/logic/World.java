@@ -607,6 +607,23 @@ public class World extends Observable {
         }
     }
 
+    public void setContinentHighlight(String continent){
+        //first deselect
+        for (Block[] blockX : blocks){
+            for (Block blockXY : blockX){
+                blockXY.setContinentIsHighlighted(false);
+            }
+        }
+        //then select
+        for (Block[] blockX : blocks){
+            for (Block blockXY : blockX){
+                if (blockXY.getContinent().equals(continent))
+                blockXY.setContinentIsHighlighted(true);
+            }
+        }
+        render();
+    }
+
     public void render(){
         setChanged();
         notifyObservers();

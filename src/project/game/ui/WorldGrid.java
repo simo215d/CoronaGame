@@ -34,7 +34,7 @@ public class WorldGrid implements Observer {
                 //create the rectangle and set color based on its infection status
                 Rectangle rectangle = new Rectangle(x,y,width,height);
                 switch (controller.getGame().getWorld().getBlocks()[i][j].getInfectionStatus()){
-                    case Block.NEUTRAL: rectangle.setFill(Color.rgb(0,255,0,0.25)); break;
+                    case Block.NEUTRAL: if (controller.getGame().getWorld().getBlocks()[i][j].isContinentIsHighlighted())rectangle.setFill(Color.rgb(0,255,0,0.25)); else rectangle.setFill(Color.rgb(0,0,0,0)); break;
                     case Block.DEAD: rectangle.setFill(Color.rgb(0,0,0,0.5)); break;
                     case Block.INFECTED: rectangle.setFill(Color.rgb(255,0,0,0.5)); break;
                     case Block.CURED: rectangle.setFill(Color.rgb(0,0,255,0.5)); break;
