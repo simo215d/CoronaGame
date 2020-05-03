@@ -629,6 +629,29 @@ public class World extends Observable {
         virusManager.updateStats();
     }
 
+    public void spreadVirus(int x, int y){
+        try {
+            if (getBlocks()[x-1][y].getInfectionStatus().equals(Block.NEUTRAL) && !getBlocks()[x][y].getContinent().equals(World.WATER)) {
+                getBlocks()[x-1][y].setInfectionStatus(Block.INFECTED);
+            }
+        } catch (Exception ignored){}
+        try {
+            if (getBlocks()[x+1][y].getInfectionStatus().equals(Block.NEUTRAL) && !getBlocks()[x][y].getContinent().equals(World.WATER)) {
+                getBlocks()[x+1][y].setInfectionStatus(Block.INFECTED);
+            }
+        } catch (Exception ignored){}
+        try {
+            if (getBlocks()[x][y-1].getInfectionStatus().equals(Block.NEUTRAL) && !getBlocks()[x][y].getContinent().equals(World.WATER)) {
+                getBlocks()[x][y-1].setInfectionStatus(Block.INFECTED);
+            }
+        } catch (Exception ignored){}
+        try {
+            if (getBlocks()[x][y+1].getInfectionStatus().equals(Block.NEUTRAL) && !getBlocks()[x][y].getContinent().equals(World.WATER)) {
+                getBlocks()[x][y+1].setInfectionStatus(Block.INFECTED);
+            }
+        } catch (Exception ignored){}
+    }
+
     public void render(){
         setChanged();
         notifyObservers();

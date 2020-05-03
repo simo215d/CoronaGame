@@ -12,6 +12,7 @@ import javafx.scene.control.ContentDisplay;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.layout.VBox;
+import project.game.logic.Game;
 import project.game.logic.VirusManager;
 
 import java.util.Observable;
@@ -28,7 +29,7 @@ public class VirusPlacer implements Observer {
     private VirusManager virusManager;
     private Scene scene;
 
-    public VirusPlacer(Group virusGroup, VirusManager virusManager, Scene scene){
+    public VirusPlacer(Group virusGroup, VirusManager virusManager, Scene scene, Game game){
         this.virusManager = virusManager;
         virusManager.addObserver(this);
         this.scene = scene;
@@ -36,6 +37,7 @@ public class VirusPlacer implements Observer {
             @Override
             public void handle(ActionEvent event) {
                 if (!(virusManager.getAvailableVirusPlacements()>0)){
+                    game.startSimulation();
                     return;
                 }
                 readyToPlace = true;

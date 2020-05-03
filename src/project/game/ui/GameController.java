@@ -45,7 +45,7 @@ public class GameController {
         stage.setScene(scene);
         game.start();
         //instantiate clickOnBlock
-        clickOnBlock = new ClickOnBlock(scene, game.getWorld(), infoGroup, infectGroup);
+        clickOnBlock = new ClickOnBlock(scene, game.getWorld(), infoGroup, infectGroup, game);
     }
 
     public Group getGridGroup(){

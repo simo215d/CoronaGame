@@ -3,11 +3,6 @@ package project.game.logic;
 import java.util.Observable;
 
 public class Game extends Observable {
-    //TODO MAKE 2d ARRAY WITH AREA CLASS WHICH ARE HAVE A CONTINENT VARIABLE AND A LIVE/DEAD/IMMUNE/INFECTED/CURED
-    //TODO SHOULD THE CONTROLLER LOGIC MAYBE BE IN HERE???
-    //TODO måske skal det ud på en seperat thread som opdaterer og sleeper
-    //maybe a world object, and the world object contains the blocks. world has a render method which goes into ui package?
-
     private World world = new World();
 
     public void start(){
@@ -18,5 +13,17 @@ public class Game extends Observable {
 
     public World getWorld(){
         return world;
+    }
+
+    public void startSimulation(){
+        System.out.println("simulation begun");
+        Thread thread = new Thread(new InfectTask(world));
+        thread.start();
+        try {
+            thread.join();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        world.render();
     }
 }

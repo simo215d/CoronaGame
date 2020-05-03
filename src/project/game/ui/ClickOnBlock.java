@@ -6,6 +6,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
+import project.game.logic.Game;
 import project.game.logic.World;
 
 public class ClickOnBlock {
@@ -14,11 +15,11 @@ public class ClickOnBlock {
     private Group infoGroup;
     private VirusPlacer virusPlacer;
 
-    public ClickOnBlock(Scene scene, World world, Group infoGroup, Group virusGroup){
+    public ClickOnBlock(Scene scene, World world, Group infoGroup, Group virusGroup, Game game){
         this.scene = scene;
         this.world = world;
         this.infoGroup = infoGroup;
-        virusPlacer = new VirusPlacer(virusGroup, world.getVirusManager(), scene);
+        virusPlacer = new VirusPlacer(virusGroup, world.getVirusManager(), scene, game);
         scene.setOnMouseClicked(new EventHandler<javafx.scene.input.MouseEvent>()  {
             @Override
             public void handle(javafx.scene.input.MouseEvent mouseEvent) {
