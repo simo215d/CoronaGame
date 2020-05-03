@@ -8,22 +8,29 @@ import javafx.scene.Group;
 import javafx.scene.ImageCursor;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.ContentDisplay;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.layout.VBox;
 import project.game.logic.VirusManager;
 
-public class VirusPlacer {
+import java.util.Observable;
+import java.util.Observer;
+
+public class VirusPlacer implements Observer {
     static double width = 200;
     static boolean readyToPlace = false;
-    private String labelText = "World population infected = ";
-    private Button virusButton = new Button("Infect a block!");
-    private Label virusLabel = new Label(labelText);
+    private String infectedText = "World population infected = ";
+    private String deadText = "    World population dead = ";
+    private String buttonText = "Infect a block! ";
+    private Button virusButton = new Button(buttonText+3);
+    private Label virusLabel = new Label(infectedText+" 0\n"+deadText+"0");
     private VirusManager virusManager;
     private Scene scene;
 
     public VirusPlacer(Group virusGroup, VirusManager virusManager, Scene scene){
         this.virusManager = virusManager;
+        virusManager.addObserver(this);
         this.scene = scene;
         virusButton.setOnAction(new EventHandler<ActionEvent>() {
             @Override
@@ -51,5 +58,13 @@ public class VirusPlacer {
         readyToPlace = false;
         scene.setCursor(Cursor.DEFAULT);
         System.out.println("virus has now been send from ui!");
+        if (virusManager.getAvailableVirusPlacements()==0){
+            virusButton.setText("Start simulation");
+        } else virusButton.setText(buttonText+virusManager.getAvailableVirusPlacements());
+    }
+
+    @Override
+    public void update(Observable o, Object arg) {
+        virusLabel.setText(infectedText+virusManager.getInfectionPercentage()+"\n"+deadText+virusManager.getDeathPercentage());
     }
 }

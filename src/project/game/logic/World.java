@@ -624,6 +624,11 @@ public class World extends Observable {
         render();
     }
 
+    public void setInfectionStatusForBlock(String status, int x, int y){
+        blocks[x][y].setInfectionStatus(status);
+        virusManager.updateStats();
+    }
+
     public void render(){
         setChanged();
         notifyObservers();
