@@ -6,7 +6,7 @@ import javafx.util.Pair;
 import java.util.ArrayList;
 
 public class InfectTask implements Runnable {
-    private int sleepTime = 1000;
+    private int sleepTime = 500;
     private ArrayList<Pair<Integer, Integer>> blockCoordinates = new ArrayList<>();
     private World world;
 
@@ -16,7 +16,7 @@ public class InfectTask implements Runnable {
 
     @Override
     public void run() {
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < 50; i++) {
             Platform.runLater(new Runnable() {
                 @Override
                 public void run() {
