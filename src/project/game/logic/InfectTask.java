@@ -1,11 +1,12 @@
 package project.game.logic;
 
+import javafx.application.Platform;
 import javafx.util.Pair;
 
 import java.util.ArrayList;
 
 public class InfectTask implements Runnable {
-    private int sleepTime = 2000;
+    private int sleepTime = 1000;
     private ArrayList<Pair<Integer, Integer>> blockCoordinates = new ArrayList<>();
     private World world;
 
@@ -15,6 +16,23 @@ public class InfectTask implements Runnable {
 
     @Override
     public void run() {
+        for (int i = 0; i < 10; i++) {
+            Platform.runLater(new Runnable() {
+                @Override
+                public void run() {
+                    step();
+                }
+            });
+            //then sleep
+            try {
+                Thread.sleep(sleepTime);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+    private void step(){
         int infected = 0;
         for (int i = 0; i < World.WORLD_X; i++) {
             for (int j = 0; j < World.WORLD_Y; j++) {
@@ -44,13 +62,6 @@ public class InfectTask implements Runnable {
             }
         }
         System.out.println("infected AFTER plague "+infected);
-        System.out.println("im going to bed zzz");
-        //then sleep
-        try {
-            Thread.sleep(sleepTime);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-        System.out.println("good morning daddy :3");
+        world.render();
     }
 }

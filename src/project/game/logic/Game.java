@@ -19,11 +19,6 @@ public class Game extends Observable {
         System.out.println("simulation begun");
         Thread thread = new Thread(new InfectTask(world));
         thread.start();
-        try {
-            thread.join();
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
         world.render();
     }
 }
