@@ -19,9 +19,9 @@
       <RowConstraints />
    </rowConstraints>
    <children>
-      <ImageView fitHeight="600.0" fitWidth="800.0">
+      <ImageView fitHeight="600.0" fitWidth="800.0" fx:id="imageViewTest">
          <image>
-            <Image url="@../resources/Corona.png" />
+            <Image url="https://cdn.eso.org/images/thumb300y/eso1907a.jpg"/>
          </image>
       </ImageView>
       <HBox prefHeight="600.0" prefWidth="800.0">
