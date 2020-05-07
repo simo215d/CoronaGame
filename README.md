@@ -5,4 +5,4 @@ Run the main class. Click new game. Place 3 viruses with the button. Run the sim
 
 
 
-Lavet af simon og pratik.
+Lavet af simon og pratick.
